@@ -16,7 +16,7 @@ const forecast = (latitude, longitude, callback) => {
             else {
                 let message = weatherAPIResponse.current.condition.text + ', It is currently ' + weatherAPIResponse.current.temp_f + 'F out. It feels like ' + weatherAPIResponse.current.feelslike_f + 'F out. '
                 message += 'There is ' + weatherAPIResponse.current.precip_in + ' inches rain today.'
-                message += `Expect a wind of ${weatherAPIResponse.current.wind_mph}`
+                message += ` Expect a wind of ${weatherAPIResponse.current.wind_mph} mph`
                 callback(undefined, message)
             }
         });
